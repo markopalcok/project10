@@ -38,16 +38,31 @@ void main() {
     //        System.out.println("Something went wrong");
     //    }
 
-    System.out.print("Ender age of man: ");
-    final int newAge = scanner.nextInt();
+        System.out.print("Ender age of man: ");
+        final int newAge = scanner.nextInt();
 
-    final Human man1 = new Human(newAge);
+        final Human man1 = new Human(newAge);
 
-    try {
-        man1.checkAge();
-    } catch (final InvalidAgeException e) {
-        System.out.println("Invalid: " + e.getMessage());
-    }
+        try {
+            man1.checkAge();
+        } catch (final InvalidAgeException e) {
+            System.out.println("Invalid: " + e.getMessage());
+        }
+
+        final MyRunnable myrunnable = new MyRunnable();
+        final Thread thread = new Thread(myrunnable);
+
+        thread.setDaemon(true);
+        thread.start();
+
+        System.out.println("----------------------------------");
+        System.out.println("You have 10 seconds to enter your name. ");
+        System.out.print("Enter your name: ");
+
+        final String name = scanner.nextLine();
+        System.out.println("Hello " + name);
+
+
 
     scanner.close();
 
