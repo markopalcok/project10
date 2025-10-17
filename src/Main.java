@@ -3,19 +3,52 @@ void main() {
     //    service.displayQuestions();
 
     final Scanner scanner = new Scanner(System.in);
-    System.out.println("Enter a day of the week: ");
-    final String response = scanner.nextLine()
-                                   .toUpperCase();
+    //    System.out.print("Enter a day of the week: ");
+    //    final String response = scanner.nextLine()
+    //                                   .toUpperCase();
+    //
+    //    try {
+    //        final Day day = Day.valueOf(response);
+    //
+    //        switch (day) {
+    //            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY -> System.out.println("Its a weekday");
+    //            case SATURDAY, SUNDAY -> System.out.println("Its a weekend");
+    //        }
+    //    } catch (final IllegalArgumentException e) {
+    //        System.out.println("Not a valid day");
+    //    }
+
+    //    final ArrayList<Integer> numbers = new ArrayList<>();
+    //    numbers.add(5);
+    //    numbers.add(2);
+    //    numbers.add(5);
+    //    numbers.add(8);
+    //    numbers.forEach((n) -> {System.out.print(n + " ");});   //statement lambda
+    //    numbers.forEach((n) -> System.out.print(n + " "));      //expression lambda
+
+    //    try {
+    //        System.out.print("Enter a number: ");
+    //        final int number = scanner.nextInt();
+    //        System.out.println(number);
+    //    } catch (final InputMismatchException e) {
+    //        System.out.println("That was not a number");
+    //    } catch (final ArithmeticException e) {
+    //        System.out.println("Can't divide by zero");
+    //    } catch (final Exception e) {
+    //        System.out.println("Something went wrong");
+    //    }
+
+    System.out.print("Ender age of man: ");
+    final int newAge = scanner.nextInt();
+
+    final Human man1 = new Human(newAge);
 
     try {
-        final Day day = Day.valueOf(response);
-
-        switch (day) {
-            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY -> System.out.println("Its a weekday");
-            case SATURDAY, SUNDAY -> System.out.println("Its a weekend");
-        }
-    } catch (final IllegalArgumentException e) {
-        System.out.println("Not a valid day");
+        man1.checkAge();
+    } catch (final InvalidAgeException e) {
+        System.out.println("Invalid: " + e.getMessage());
     }
+
     scanner.close();
+
 }
