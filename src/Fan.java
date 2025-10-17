@@ -1,5 +1,6 @@
-public class Fan extends Appliance{
-    Fan(String name) {
+public class Fan extends Appliance {
+
+    Fan(final String name) {
         super(name);
     }
 
@@ -7,4 +8,5 @@ public class Fan extends Appliance{
     public String start() {
         return "Fan is running";
     }
+
 }
