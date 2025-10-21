@@ -37,8 +37,9 @@ class QuestionService {
     void displayQuestions() {
         for (final Question q : this.questions) {
             System.out.println(q.toString());
-            }
         }
+    }
+
     void printScore() {
         int score = 0;
 
