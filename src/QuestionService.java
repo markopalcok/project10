@@ -34,6 +34,12 @@ class QuestionService {
         System.out.println();
     }
 
+    void displayQuestions() {
+        for (final Question q : this.questions) {
+            System.out.println(q.toString());
+        }
+    }
+
     void printScore() {
         int score = 0;
 
@@ -49,5 +55,4 @@ class QuestionService {
         }
         System.out.println("Your score is: " + score);
     }
-
 }

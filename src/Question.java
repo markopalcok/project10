@@ -1,4 +1,4 @@
-class Question {
+public class Question {
 
     private int id;
     private String question;
@@ -8,7 +8,7 @@ class Question {
     private String option4;
     private String answer;
 
-    Question(final int id, final String question, final String option1, final String option2, final String option3, final String option4, final String answer) {
+    public Question(final int id, final String question, final String option1, final String option2, final String option3, final String option4, final String answer) {
         this.id = id;
         this.question = question;
         this.option1 = option1;
@@ -18,7 +18,7 @@ class Question {
         this.answer = answer;
     }
 
-    int getId() {
+    public int getId() {
         return this.id;
     }
 
@@ -26,7 +26,7 @@ class Question {
         this.id = id;
     }
 
-    String getQuestion() {
+    public String getQuestion() {
         return this.question;
     }
 
@@ -34,7 +34,7 @@ class Question {
         this.question = question;
     }
 
-    String getOption1() {
+    public String getOption1() {
         return this.option1;
     }
 
@@ -42,7 +42,7 @@ class Question {
         this.option1 = option1;
     }
 
-    String getOption2() {
+    public String getOption2() {
         return this.option2;
     }
 
@@ -50,7 +50,7 @@ class Question {
         this.option2 = option2;
     }
 
-    String getOption3() {
+    public String getOption3() {
         return this.option3;
     }
 
@@ -58,7 +58,7 @@ class Question {
         this.option3 = option3;
     }
 
-    String getOption4() {
+    public String getOption4() {
         return this.option4;
     }
 
@@ -66,7 +66,7 @@ class Question {
         this.option4 = option4;
     }
 
-    String getAnswer() {
+    public String getAnswer() {
         return this.answer;
     }
 
